@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sudoku-solver"
+version = "1.0.0"
+description = "Sudoku solver with constraint propagation, uniqueness checking, difficulty scoring and step narration"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
+[project.scripts]
+sudoku-solver = "sudoku_solver.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["sudoku_solver*"]
